@@ -1,0 +1,64 @@
+*
+{
+    box-sizing: border-box;
+}
+html
+{
+    height: 100%;
+}
+body
+{
+    background-color: rgb(151, 247, 151);
+}
+.grid-container
+{
+    display: grid;
+    gap: 10px;
+    grid-template: 
+    "header" 100px
+    "aside"  600px
+    "main"   auto
+    "footer" 50px;
+    
+}
+@media (min-width: 600px)
+{
+    .grid-container
+    {
+            grid-template: 
+            "header header" 100px
+            "aside  main"   auto
+            "footer footer" 50px /
+             auto  auto;
+    }
+}
+
+@media (min-width: 900px)
+{
+    .grid-container
+    {
+            grid-template:  
+            "header header" 100px
+            "aside  main"   auto
+            "footer footer" 50px /
+             auto  auto;
+    }
+}
+
+.header
+{
+    grid-area: header;
+}
+.aside
+{
+    grid-area: aside;
+}
+
+.main
+{
+    grid-area: main;
+}
+.footer
+{
+    grid-area: footer;
+}
